@@ -1,0 +1,50 @@
+############################
+# --- Website Settings --- #
+############################
+
+url: https://www.noakim.io
+title: Noa Kim
+author: Noa Kim
+description: Solver. Maker. Teacher. 
+email: hello@noakim.io
+social:
+  name: Noa Kim
+  links:
+    - github: https://github.com/noanonoa
+    - linkedin: https://www.linkedin.com/in/noanonoa
+
+# Assets
+logo: /assets/images/NK-square-logo.png
+avatar: /assets/images/profile.jpg
+title-image: /assets/images/NK-logo.png
+
+# Projects
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name
+
+###################
+# --- Options --- #
+###################
+
+markdown: kramdown
+permalink: :title
+timezone: America/Chicago
+highlighter: rouge
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-email-protect
+  - jekyll-seo-tag
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  
