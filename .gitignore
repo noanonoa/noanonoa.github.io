@@ -1,5 +1,11 @@
-# Ignore Mac system files
-.DS_store
-
-# Ignore all text files
-*.txt
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+*.lock
+*.log
+.DS_Store
+.asset-cache
+.bundle
+node_modules

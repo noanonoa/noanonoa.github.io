@@ -1,0 +1,24 @@
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HP4X8B461"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1HP4X8B461');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="200x200" href="/assets/images/NK-square-logo.png">
+  <link rel="icon" type="image/png" href="/assets/images/NK-square-logo.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  {% if page.layout == "project" %}
+  <link rel="stylesheet" href="{{ page.stylesheet }}">
+  {% endif %}
+  {% if page.layout == "project" %}
+  <script defer src="{{ page.script }}"></script>
+  {% endif %}
+  {% feed_meta %}
+  {% seo %}
+</head>

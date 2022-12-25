@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-logo">
+    <a href="/"><img src="{{ site.title-image }}" alt="NK logo"></a>
+  </div>
+  <div class="nav-menu">
+    <ul>
+      {% for item in site.data.navigation %}
+      <li>
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+          {{ item.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+
