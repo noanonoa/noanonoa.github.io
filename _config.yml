@@ -17,6 +17,10 @@ social:
 logo: /assets/images/NK-square-logo.png
 avatar: /assets/images/profile.jpg
 title-image: /assets/images/NK-logo.png
+sass:
+  style: compressed
+  load_paths:
+    - _sass
 
 # Projects
 collections:
