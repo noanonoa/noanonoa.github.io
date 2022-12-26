@@ -7,8 +7,6 @@ title: Noa Kim
 author: Noa Kim
 description: Solver. Maker. Teacher. 
 email: hello@noakim.io
-github: [metadata]
-repository: noanonoa/noanonoa.github.io
 social:
   name: Noa Kim
   links:
@@ -38,8 +36,16 @@ markdown: kramdown
 permalink: :title
 timezone: America/Chicago
 highlighter: rouge
+github: [metadata]
+repository: noanonoa/noanonoa.github.io
 kramdown:
   input: GFM
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blog/:title
 
 plugins:
   - jekyll-sitemap
