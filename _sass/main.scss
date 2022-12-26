@@ -62,12 +62,12 @@ nav {
 .hero {
   position: relative;
   top: $navbar-height;
-  height: calc(100% - $navbar-height);
+  height: calc(100% - 80px);
   min-height: 700px;
 
   .logo-container {
     position: absolute;
-    top: calc(50% - $navbar-height);
+    top: calc(50% - 80px);
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -175,7 +175,7 @@ li {
     bottom: 30px;
     background-color: inherit;
     width: 100%;
-    height: calc($navbar-height * 10);
+    height: calc(80px * 10);
     transform: skewY(-4deg) translateY(90%);
   }
 }
