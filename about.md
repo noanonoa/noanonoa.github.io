@@ -20,7 +20,7 @@ in Nashville, TN.
 - Persuasion
 
 ## Mission
-- Service
+- Serve
 - Assist
 - Protect
 
