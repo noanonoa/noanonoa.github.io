@@ -66,8 +66,8 @@ nav {
   min-height: 700px;
 
   .logo-container {
-    position: absolute;
-    top: calc(50% - 80px);
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -167,7 +167,7 @@ li {
   bottom: 0;
   background-color: rgba(242,238,235,1);
   width: 100%;
-  z-index: -1000;
+  z-index: 1000;
 
   &::before {
     content: "";
