@@ -17,6 +17,10 @@ social:
 logo: /assets/images/NK-square-logo.png
 avatar: /assets/images/profile.jpg
 title-image: /assets/images/NK-logo.png
+
+include:
+  - _pages
+
 sass:
   style: compressed
   load_paths:
@@ -41,6 +45,10 @@ repository: noanonoa/noanonoa.github.io
 kramdown:
   input: GFM
 defaults:
+  - scope:
+      path: "_pages"
+    values:
+      permalink: /:basename
   - scope:
       path: ""
       type: "posts"
