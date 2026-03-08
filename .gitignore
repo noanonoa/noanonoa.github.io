@@ -9,3 +9,4 @@ vendor
 .asset-cache
 .bundle
 node_modules
+sandbox
