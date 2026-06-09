@@ -1,0 +1,32 @@
+.s-hero {
+  position: relative;
+  top: $navbar-height;
+  height: calc(100% - 80px);
+  min-height: 700px;
+
+  .s-hero__header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 10px 0;
+      font-size: 1.5em;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    // Hides header underscore for hero section
+    &::after {
+      display: none;
+    }
+  }
+}

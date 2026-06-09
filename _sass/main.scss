@@ -2,6 +2,8 @@
 
 $navbar-height: 80px;
 
+@import "sections/hero";
+
 * {
   box-sizing: border-box;
 }
@@ -61,34 +63,6 @@ nav {
 
   .current {
     box-shadow: 4px 4px 6px rgba(4,36,64,.4);
-  }
-}
-
-.hero {
-  position: relative;
-  top: $navbar-height;
-  height: calc(100% - 80px);
-  min-height: 700px;
-
-  .logo-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    img {
-      display: block;
-      width: 200px;
-      margin: 0 auto;
-    }
-
-    h1 {
-      margin: 0;
-      padding: 10px 0;
-      font-size: 1.5em;
-      font-weight: 400;
-      text-align: center;
-    }
   }
 }
 
