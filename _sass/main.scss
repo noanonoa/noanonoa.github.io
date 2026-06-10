@@ -2,6 +2,7 @@
 
 $navbar-height: 80px;
 
+@import "sections/about";
 @import "sections/hero";
 
 * {
@@ -84,58 +85,6 @@ section {
   position: relative;
   top: $navbar-height;
   margin: 0 auto;
-}
-
-header {
-  margin-bottom: 50px;
-
-  div.header-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 24px;
-    overflow: hidden;
-    margin-bottom: 24px;
-
-    img {
-      height: 100%;
-      margin: 0px auto;
-    }
-  }
-
-  h1 {
-    font-weight: 900;
-    font-size: 4em;
-    margin: 0;
-    margin-bottom: 12px;
-  }
-
-  div.labels {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-
-    span {
-      font-size: .9rem;
-      padding: 6px 8px;
-      border-radius: 24px;
-      color: rgba(4,36,64,1);
-      background-color: rgba(242,238,235,1);
-      white-space: nowrap;
-    }
-
-    @media(min-width: 768px) {
-      width: 67%;
-    }
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 5rem;
-    height: 8px;
-    margin: 32px 0;
-    background-color: rgba(4,36,64,1);
-  }
 }
 
 h2 {
