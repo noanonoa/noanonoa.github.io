@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: default
 title: Flappy Bird
 stylesheet: /assets/css/flappy-bird.css
 script: /assets/js/flappy-bird.js

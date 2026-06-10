@@ -1,5 +1,17 @@
----
-layout: base
----
+<!DOCTYPE html>
 
-{{ content }}
+<html lang="en-US">
+  {% include head.html %}
+
+  <body>
+    <header class="l-header">
+      {% include nav.html %}
+    </header>
+
+    <main id="main-content" class="l-main">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
