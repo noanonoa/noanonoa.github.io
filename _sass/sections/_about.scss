@@ -1,0 +1,52 @@
+header {
+  margin-bottom: 50px;
+
+  div.header-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    img {
+      height: 100%;
+      margin: 0px auto;
+    }
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: 4em;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  ul.label-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    li {
+      font-size: .9rem;
+      padding: 6px 8px;
+      border-radius: 24px;
+      color: rgba(4,36,64,1);
+      background-color: rgba(242,238,235,1);
+      white-space: nowrap;
+    }
+
+    @media(min-width: 768px) {
+      width: 67%;
+    }
+  }
+
+	// Header underscore
+  &::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 8px;
+    margin: 32px 0;
+    background-color: rgba(4,36,64,1);
+  }
+}
