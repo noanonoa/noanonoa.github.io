@@ -1,6 +1,10 @@
 - name: About
-  link: /about
+  link: /#about
+- name: Experience
+  link: /#experience
+- name: Projects
+  link: /#projects
+- name: Contact
+  link: /#contact
 - name: Blog
   link: /blog
-- name: Contact
-  link: /contact
