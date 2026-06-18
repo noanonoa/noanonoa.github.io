@@ -1,2 +1,19 @@
 [tools]
 ruby = "3.3.7"
+yarn = "1.22.22"
+
+[tasks.build]
+description = "Build the Jekyll site"
+run = "bundle exec jekyll build"
+
+[tasks.test]
+description = "Run Vitest suite"
+run = "yarn test"
+
+[tasks."test:watch"]
+description = "Run and watch Vitest suite"
+run = "yarn test:watch"
+
+[tasks.dev]
+description = "Start the Jekyll local server"
+run = "bundle exec jekyll serve --livereload"
