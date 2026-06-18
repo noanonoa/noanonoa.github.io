@@ -1,0 +1,27 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--navbar-height);
+}
+
+body {
+	width: 100%;
+	margin: 0 auto;
+	min-width: var(--container-min-width);
+	max-width: var(--container-max-width);
+	font-family: var(--font-family-primary);
+	font-size: var(--font-size-base);
+	display: flex;
+	flex-direction: column;
+}
+
+main.l-main {
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+	margin-top: var(--navbar-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
