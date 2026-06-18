@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
+
+:root {
+	// Colors
+	--color-primary-rgb: 242, 238, 235;
+	--color-secondary-rgb: 4, 36, 64;
+
+	--color-bg-primary: rgba(var(--color-primary-rgb));
+	--color-bg-secondary: rgba(var(--color-secondary-rgb));
+	--color-text-primary: rgba(var(--color-secondary-rgb));
+	--color-text-secondary: rgba(var(--color-primary-rgb));
+	--color-text-muted: rgba(var(--color-secondary-rgb), 0.7);
+	--color-shadow: rgba(var(--color-secondary-rgb), 0.4);
+
+	// Layout & Spacing
+	--navbar-height: 80px;
+	--container-max-width: #{$breakpoint-lg};
+	--container-min-width: #{$breakpoint-sm};
+	--border-radius-card: 24px;
+	--spacer-xs: 4px;
+	--spacer-sm: 8px;
+	--spacer-md: 16px;
+	--spacer-lg: 32px;
+	--spacer-xl: 64px;
+
+	// Typography
+	--font-family-primary: 'Jost', sans-serif;
+	--font-size-base: 18px;
+
+	// Base Motions
+	--duration-fast: 200ms;
+	--duration-normal: 300ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+	// Composite Transitions
+  --transition-fade: opacity var(--duration-fast) var(--ease-standard);
+  --transition-transform: transform var(--duration-normal) var(--ease-standard);
+}

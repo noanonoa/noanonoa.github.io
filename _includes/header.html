@@ -1,0 +1,33 @@
+<header class="l-header">
+  <nav id="nav">
+    <div class="nav-logo-container">
+      <a href="/">
+        <img src="{{ site.title-image }}" alt="NK logo">
+      </a>
+    </div>
+    <div
+      id="nav-menu"
+      class="nav-menu"
+      data-open="false">
+      <ul>
+        {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
+            {{ item.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <button
+      id="nav-toggle"
+      class="nav-toggle"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>

@@ -1,0 +1,139 @@
+nav {
+	display: flex;
+	width: 100%;
+	max-width: var(--container-max-width);
+	margin: 0 auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	height: var(--navbar-height);
+	background-color: var(--color-bg-primary);
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+
+	a {
+		text-decoration: none;
+
+    &:visited {
+			color: var(--color-text-primary);
+		}
+
+    &:link {
+			color: var(--color-text-primary);
+		}
+	}
+
+  .nav-logo-container {
+		width: 50px;
+		height: 50px;
+		min-width: 50px;
+		min-height: 50px;
+
+		a {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			position: absolute;
+      width: 50px;
+			top: 50%;
+			left: 50%;
+      transform: translate(-50%, -50%);
+		}
+	}
+
+	.nav-menu {
+		position: absolute;
+		top: var(--navbar-height);
+		left: 0;
+		background-color: var(--color-bg-primary);
+		width: 100%;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+	  transition: var(--transition-fade);
+
+		ul {
+			display: flex;
+      flex-direction: column;
+			gap: var(--spacer-md);
+			padding-top: var(--spacer-md);
+			padding-bottom: var(--spacer-md);
+
+			li {
+				list-style: none;
+			}
+		}
+
+		&[data-open="true"] {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+	}
+
+	.nav-toggle {
+		background: none;
+		border: none;
+		cursor: pointer;
+    height: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-sm);
+		align-items: center;
+		justify-content: center;
+
+    span {
+      display: block;
+      width: var(--spacer-lg);
+			height: var(--spacer-xs);
+			background: var(--color-text-primary);
+			transition: var(--transition-transform),
+								  var(--transition-fade);
+			transform-origin: center;
+		}
+
+		&.active {
+      span {
+        &:nth-child(1) {
+					transform: translateY(calc(var(--spacer-sm) + var(--spacer-xs))) rotate(45deg);
+				}
+
+        &:nth-child(2) {
+					opacity: 0;
+					transform: scaleX(0);
+				}
+
+        &:nth-child(3) {
+					transform: translateY(calc(-1 * (var(--spacer-sm) + var(--spacer-xs)))) rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	@include respond-to('md') {
+		button.nav-toggle {
+      display: none;
+		}
+
+		.nav-menu {
+			position: relative;
+      visibility: visible;
+			pointer-events: auto;
+			opacity: 1;
+			width: auto;
+			top: 0;
+
+			ul {
+				flex-direction: revert;
+				padding: var(--spacer-md);
+			}
+		}
+	}
+}
