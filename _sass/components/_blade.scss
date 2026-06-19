@@ -1,0 +1,21 @@
+.blade-up {
+	background-color: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(4 * var(--navbar-height));
+	transform:  skewY(-4deg) translateY(-25%);
+	z-index: -1;
+}
+
+.blade-down {
+	background-color: inherit;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: calc(4 * var(--navbar-height));
+	transform:  skewY(4deg) translateY(10%);
+	z-index: -1;
+}

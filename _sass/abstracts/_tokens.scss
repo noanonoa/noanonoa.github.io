@@ -4,9 +4,11 @@
 	// Colors
 	--color-primary-rgb: 242, 238, 235;
 	--color-secondary-rgb: 4, 36, 64;
+	--color-tertiary-rgb: 255, 255, 255;
 
 	--color-bg-primary: rgba(var(--color-primary-rgb));
 	--color-bg-secondary: rgba(var(--color-secondary-rgb));
+	--color-bg-tertiary: rgba(var(--color-tertiary-rgb));
 	--color-text-primary: rgba(var(--color-secondary-rgb));
 	--color-text-secondary: rgba(var(--color-primary-rgb));
 	--color-text-muted: rgba(var(--color-secondary-rgb), 0.7);
@@ -16,12 +18,16 @@
 	--navbar-height: 80px;
 	--container-max-width: #{$breakpoint-lg};
 	--container-min-width: #{$breakpoint-sm};
-	--border-radius-card: 24px;
+	--rounded-sm: 12px;
+	--rounded-md: 24px;
+	--rounded-lg: 48px;
 	--spacer-xs: 4px;
 	--spacer-sm: 8px;
 	--spacer-md: 16px;
 	--spacer-lg: 32px;
 	--spacer-xl: 64px;
+	--spacer-2xl: 72px;
+	--grid-template-left: 300px auto;
 
 	// Typography
 	--font-family-primary: 'Jost', sans-serif;
@@ -31,6 +37,8 @@
 	--font-size-lg: 1.25rem;
 	--font-size-xl: 1.5rem;
 	--font-size-2xl: 2rem;
+	--font-size-3xl: 3rem;
+	--font-size-4xl: 4rem;
 	--regular: 400;
 	--semibold: 600;
 	--bold: 800;
@@ -44,4 +52,16 @@
 	// Composite Transitions
   --transition-fade: opacity var(--duration-fast) var(--ease-standard);
   --transition-transform: transform var(--duration-normal) var(--ease-standard);
+}
+
+.bg-primary {
+	background-color: var(--color-bg-primary);
+}
+
+.bg-secondary {
+	background-color: var(--color-bg-secondary);
+}
+
+.bg-tertiary {
+	background-color: var(--color-bg-tertiary);
 }
