@@ -33,6 +33,16 @@ body {
 
 main.l-main {
 	margin-top: var(--navbar-height);
+
+	a {
+		&:visited {
+      color: var(--color-text-primary);
+		}
+
+		&:link {
+      color: var(--color-text-primary);
+		}
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
