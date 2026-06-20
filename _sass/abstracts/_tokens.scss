@@ -11,7 +11,8 @@
 	--color-bg-tertiary: rgba(var(--color-tertiary-rgb));
 	--color-text-primary: rgba(var(--color-secondary-rgb));
 	--color-text-secondary: rgba(var(--color-primary-rgb));
-	--color-text-muted: rgba(var(--color-secondary-rgb), 0.7);
+	--color-text-primary-muted: rgba(var(--color-secondary-rgb), 0.8);
+	--color-text-secondary-muted: rgba(var(--color-primary-rgb), 0.8);
 	--color-shadow: rgba(var(--color-secondary-rgb), 0.4);
 
 	// Layout & Spacing
