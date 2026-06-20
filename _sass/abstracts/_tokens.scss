@@ -27,6 +27,7 @@
 	--spacer-lg: 32px;
 	--spacer-xl: 64px;
 	--spacer-2xl: 72px;
+	--spacer-3xl: 128px;
 	--grid-template-left: 300px auto;
 
 	// Typography
@@ -52,6 +53,11 @@
 	// Composite Transitions
   --transition-fade: opacity var(--duration-fast) var(--ease-standard);
   --transition-transform: transform var(--duration-normal) var(--ease-standard);
+
+	// Icons & Border
+	--border-primary: 1px solid var(--color-text-primary);
+	--rounded-btn: 8px;
+	--inline-icon: calc(1.5 * var(--font-size-base));
 }
 
 .bg-primary {
@@ -65,3 +71,4 @@
 .bg-tertiary {
 	background-color: var(--color-bg-tertiary);
 }
+
