@@ -36,7 +36,7 @@
 	.s-about {
 		display: grid;
 		grid-template-columns: var(--grid-template-left);
-		gap: var(--spacer-md);
+		gap: var(--spacer-lg);
 		padding: var(--spacer-lg) var(--spacer-2xl);
 
 		.label-wrapper {
