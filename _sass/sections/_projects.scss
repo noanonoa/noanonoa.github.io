@@ -1,0 +1,47 @@
+.s-projects {
+	position: relative;
+	min-height: 600px;
+	color: var(--color-text-secondary);
+	padding-top: var(--spacer-xl);
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+	padding-bottom: var(--spacer-lg);
+
+	h2 {
+		font-size: var(--font-size-3xl);
+		font-weight: var(--bold);
+	}
+
+	p {
+		color: var(--color-text-secondary-muted);
+	}
+
+	a {
+		color: var(--color-text-secondary-muted);
+
+    &:visited {
+			color: var(--color-text-secondary-muted);
+		}
+
+    &:link {
+			color: var(--color-text-secondary-muted);
+		}
+
+		&:hover {
+			color: var(--color-text-secondary);
+		}
+	}
+
+	.accent {
+		&::after {
+			background-color: var(--color-text-secondary);
+		}
+	}
+}
+
+@include respond-to('md') {
+	.s-projects {
+		padding-left: var(--spacer-2xl);
+		padding-right: var(--spacer-2xl);
+	}
+}

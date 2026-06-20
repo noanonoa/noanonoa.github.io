@@ -12,6 +12,7 @@
 
 	h2 {
 		font-size: var(--font-size-3xl);
+		font-weight: var(--bold);
 	}
 
 	p {
@@ -25,6 +26,7 @@
 		gap: var(--spacer-md);
 
 		a {
+			color: var(--color-text-primary-muted);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -33,6 +35,7 @@
 			border: var(--border-primary);
 			border-radius: var(--rounded-btn);
 			transition: background-color 0.2s ease;
+			text-decoration: none;
 
 			.social-icon {
 				width: var(--inline-icon);
@@ -40,6 +43,7 @@
 			}
 
 			&:hover {
+				color: var(--color-text-primary);
 				background-color: var(--color-bg-primary);
 			}
 		}
