@@ -16,6 +16,7 @@ body {
 
 	p {
 		padding-bottom: var(--spacer-md);
+		color: var(--color-text-primary-muted);
 	}
 
 	.accent {
@@ -31,7 +32,7 @@ body {
 	}
 }
 
-main.l-main {
+.l-main {
 	margin-top: var(--navbar-height);
 
 	a {

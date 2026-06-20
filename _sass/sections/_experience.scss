@@ -1,0 +1,19 @@
+.s-experience {
+	min-height: 600px;
+	padding-top: var(--spacer-xl);
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+	padding-bottom: var(--spacer-lg);
+
+	h2 {
+		font-size: var(--font-size-3xl);
+		font-weight: var(--bold);
+	}
+}
+
+@include respond-to('md') {
+	.s-experience {
+		padding-left: var(--spacer-2xl);
+		padding-right: var(--spacer-2xl);
+	}
+}

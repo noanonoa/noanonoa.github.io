@@ -1,5 +1,13 @@
-<section id="projects">
+<section id="projects" class="s-projects bg-secondary">
 	<header>
-		<h2>Projects</h2>
+		<h2 class="accent">
+			Projects
+		</h2>
 	</header>
+
+  {% for project in site.projects %}
+    <a href="{{ project.url }}">{{ project.title }}</a> {% if project.description %} {{ project.description }} {% endif %}
+  {% endfor %}
+
+	<div class="blade-down"></div>
 </section>
