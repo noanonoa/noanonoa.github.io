@@ -13,12 +13,12 @@
   <link rel="icon" type="image/png" href="/assets/images/NK-square-logo.png">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/assets/css/main.css">
-  {% if page.layout == "project" %}
-  <link rel="stylesheet" href="{{ page.stylesheet }}">
-  {% endif %}
   <script type="module" src="/assets/js/main.js"></script>
-  {% if page.layout == "project" %}
-  <script defer src="{{ page.script }}"></script>
+  {% if page.stylesheet %}
+    <link rel="stylesheet" href="{{ page.stylesheet }}">
+  {% endif %}
+  {% if page.script %}
+    <script defer src="{{ page.script }}"></script>
   {% endif %}
   {% feed_meta %}
   {% seo %}

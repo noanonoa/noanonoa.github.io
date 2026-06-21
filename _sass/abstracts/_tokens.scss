@@ -19,6 +19,7 @@
 	--navbar-height: 80px;
 	--container-max-width: #{$breakpoint-lg};
 	--container-min-width: #{$breakpoint-sm};
+	--rounded-xs: 6px;
 	--rounded-sm: 12px;
 	--rounded-md: 24px;
 	--rounded-lg: 48px;
@@ -57,6 +58,8 @@
 
 	// Icons & Border
 	--border-primary: 1px solid var(--color-text-primary);
+	--border-secondary: 1px solid var(--color-text-secondary);
+	--border-secondary-muted: 1px solid var(--color-text-secondary-muted);
 	--rounded-btn: 8px;
 	--inline-icon: calc(1.5 * var(--font-size-base));
 }
@@ -73,3 +76,38 @@
 	background-color: var(--color-bg-tertiary);
 }
 
+.btn-primary {
+	color: var(--color-text-primary-muted);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacer-md) var(--spacer-lg);
+	gap: var(--spacer-sm);
+	border: var(--border-primary);
+	border-radius: var(--rounded-btn);
+	transition: background-color 0.2s ease;
+	text-decoration: none;
+
+	&:hover {
+		color: var(--color-text-primary);
+		background-color: var(--color-bg-primary);
+	}
+}
+
+.btn-secondary {
+	color: var(--color-text-secondary-muted);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--spacer-md) var(--spacer-lg);
+	gap: var(--spacer-sm);
+	border: var(--border-secondary-muted);
+	border-radius: var(--rounded-btn);
+	transform: border .2s ease;
+	text-decoration: none;
+
+	&:hover {
+		color: var(--color-text-secondary);
+		border: var(--border-secondary);
+	}
+}
