@@ -26,25 +26,9 @@
 		gap: var(--spacer-md);
 
 		a {
-			color: var(--color-text-primary-muted);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: var(--spacer-md) var(--spacer-lg);
-			gap: var(--spacer-sm);
-			border: var(--border-primary);
-			border-radius: var(--rounded-btn);
-			transition: background-color 0.2s ease;
-			text-decoration: none;
-
 			.social-icon {
 				width: var(--inline-icon);
 				height: var(--inline-icon);
-			}
-
-			&:hover {
-				color: var(--color-text-primary);
-				background-color: var(--color-bg-primary);
 			}
 		}
 	}

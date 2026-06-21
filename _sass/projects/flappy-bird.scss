@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.s-project {
+	position: relative;
+	// min-height: 600px;
+
+	.game-title {
+		padding-top: var(--spacer-lg);
+
+		h1 {
+			text-align: center;
+			font-family: 'Carter One', sans-serif;
+			color: rgb(251, 176, 37);
+			font-size: var(--font-size-3xl);
+			text-shadow: -1px -1px 0 #000,
+									1px -1px 0 #000,
+									-1px 1px 0 #000,
+									1px 1px 0 #000;
+
+			@include respond-to('md') {
+				font-size: var(--font-size-4xl);
+			}
+		}
+	}
+
+	.game-screen {
+		padding-top: var(--spacer-lg);
+		padding-bottom: var(--spacer-xl);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--spacer-lg);
+
+		canvas#game {
+			border: 1px solid black;
+				display: block;
+				width: 300px;
+				height: 500px;
+				margin: 0 auto;
+				border-radius: 10px;
+		}
+
+		p#instructions {
+			span.code {
+				font-size: var(--font-size-sm);
+				font-family: monospace;
+				background-color: var(--color-bg-primary);
+				padding: 4px;
+				border-radius: var(--rounded-xs);
+			}
+		}
+	}
+}
