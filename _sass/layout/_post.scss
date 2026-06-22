@@ -1,0 +1,33 @@
+.s-post {
+	position: relative;
+  min-height: max(600px, calc(100vh - var(--navbar-height)));
+	padding-top: var(--spacer-lg);
+	padding-bottom: var(--spacer-3xl);
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+  display: flex;
+	flex-direction: column;
+	gap: var(--spacer-md);
+
+	h1 {
+		font-size: var(--font-size-3xl);
+		font-weight: var(--bold);
+	}
+
+  div.video-container {
+		margin-top: var(--spacer-lg);
+		margin-bottom: var(--spacer-lg);
+
+		.video {
+			width: 100%;
+			aspect-ratio: 16 / 9;
+		}
+	}
+}
+
+@include respond-to('md') {
+	.s-post {
+		padding-left: var(--spacer-xl);
+		padding-right: var(--spacer-xl);
+	}
+}

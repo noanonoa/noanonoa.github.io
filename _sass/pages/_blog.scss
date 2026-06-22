@@ -1,0 +1,28 @@
+.s-blog {
+	position: relative;
+  min-height: max(600px, calc(100vh - var(--navbar-height)));
+	padding: var(--spacer-lg) var(--spacer-md);
+  display: flex;
+	flex-direction: column;
+	gap: var(--spacer-lg);
+
+	h1 {
+		font-size: var(--font-size-4xl);
+		font-weight: var(--bold);
+	}
+
+	ul {
+    display: flex;
+		flex-direction: column;
+		gap: var(--spacer-md);
+		padding: 0;
+		list-style: none;
+	}
+}
+
+@include respond-to('md') {
+	.s-blog {
+		padding-left: var(--spacer-xl);
+		padding-right: var(--spacer-xl);
+	}
+}

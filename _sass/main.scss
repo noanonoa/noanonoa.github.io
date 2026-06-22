@@ -4,11 +4,13 @@
 @import "base/reset";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/footer";
+@import "layout/post";
+@import "pages/blog";
 @import "sections/hero";
 @import "sections/about";
 @import "sections/experience";
 @import "sections/projects";
 @import "sections/connect";
-@import "layout/footer";
 @import "components/blade";
 @import "components/label";
