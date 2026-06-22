@@ -1,6 +1,6 @@
 .s-projects {
 	position: relative;
-	min-height: 600px;
+  min-height: max(600px, calc(80vh - var(--navbar-height)));
 	color: var(--color-text-secondary);
 	padding-top: var(--spacer-xl);
 	padding-left: var(--spacer-md);
