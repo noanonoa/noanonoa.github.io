@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en-US">
   <head>
   <!-- Google tag (gtag.js) -->
@@ -14,7 +15,8 @@
   <link rel="apple-touch-icon" sizes="200x200" href="/assets/images/NK-square-logo.png">
   <link rel="icon" type="image/png" href="/assets/images/NK-square-logo.png">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="module" src="/assets/js/main.js"></script>
   
   
   <link type="application/atom+xml" rel="alternate" href="https://www.noakim.io/pages/noanonoa/feed.xml" title="Noa Kim" />
@@ -42,39 +44,69 @@
 
 </head>
 
+
   <body>
-    <nav>
-  <div class="nav-logo">
-    <a href="/"><img src="/assets/images/NK-logo.png" alt="NK logo"></a>
-  </div>
-  <div class="nav-menu">
-    <ul>
-      
-      <li>
-        <a href="/about" >
-          About
-        </a>
-      </li>
-      
-      <li>
-        <a href="/blog" >
-          Blog
-        </a>
-      </li>
-      
-      <li>
-        <a href="/contact" >
-          Contact
-        </a>
-      </li>
-      
-    </ul>
-  </div>
-</nav>
+    <header class="l-header">
+  <nav id="nav">
+    <div class="nav-logo-container">
+      <a href="/">
+        <img src="/assets/images/NK-logo.png" alt="NK logo">
+      </a>
+    </div>
+    <div
+      id="nav-menu"
+      class="nav-menu"
+      data-open="false">
+      <ul>
+        
+        <li>
+          <a href="/#about" >
+            About
+          </a>
+        </li>
+        
+        <li>
+          <a href="/#experience" >
+            Experience
+          </a>
+        </li>
+        
+        <li>
+          <a href="/#projects" >
+            Projects
+          </a>
+        </li>
+        
+        <li>
+          <a href="/#connect" >
+            Connect
+          </a>
+        </li>
+        
+        <li>
+          <a href="/blog" >
+            Blog
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    <button
+      id="nav-toggle"
+      class="nav-toggle"
+      aria-controls="nav-menu"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
 
 
-    <section>
-  <h1 id="gemini-cli-instructions---noakimio">Gemini CLI Instructions - noakim.io</h1>
+    <main id="main-content" class="l-main">
+      <h1 id="gemini-cli-instructions---noakimio">Gemini CLI Instructions - noakim.io</h1>
 
 <h2 id="technical-constraints">Technical Constraints</h2>
 <ul>
@@ -104,7 +136,35 @@ responses.</li>
 professional summary.</li>
 </ul>
 
-</section>
+    </main>
 
+    <footer class="s-footer bg-secondary">
+  <p>
+    © 2026 — All rights reserved
+  </p>
+  <div class="footer-links">
+    <div>
+      <span>
+        Certifications
+      </span>
+      <div>
+        <a href="/assets/pdf/istqb-certificate.pdf" target="_blank" rel="noopener">Certified Tester Foundation Level (CTFL)</a>
+        —
+        <a href="https://atsqa.org/certified-testers/profile/9e0d69cb0ed149c3a294ef2ffefcc388" target="_blank" rel="noopener">ATSQB.org</a>
+      </div>
+      <a href="/assets/pdf/ga-certificate.pdf" target="_blank" rel="noopener">Certificate of Completion in Software Engineering</a>
+    </div>
+    <div>
+      <span>
+        Documents
+      </span>
+      <div>
+        <a href="/assets/pdf/noa-kim-resume.pdf" target="_blank" rel="noopener">
+          Resume
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
   </body>
 </html>
