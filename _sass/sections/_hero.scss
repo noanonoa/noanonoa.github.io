@@ -1,7 +1,6 @@
 .s-hero {
 	position: relative;
-	min-height: 600px;
-	height: calc(100vh - var(--navbar-height));
+  min-height: max(600px, calc(100vh - var(--navbar-height)));
 
 	.s-hero__header {
     position: absolute;

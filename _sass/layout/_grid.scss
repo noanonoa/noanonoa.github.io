@@ -34,6 +34,7 @@ body {
 
 .l-main {
 	margin-top: var(--navbar-height);
+	flex-grow: 1;
 
 	a {
 		&:visited {

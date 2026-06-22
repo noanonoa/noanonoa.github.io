@@ -1,5 +1,5 @@
 .s-experience {
-	min-height: 600px;
+  min-height: max(600px, calc(80vh - var(--navbar-height)));
 	padding-top: var(--spacer-xl);
 	padding-left: var(--spacer-md);
 	padding-right: var(--spacer-md);

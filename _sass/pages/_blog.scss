@@ -1,6 +1,5 @@
 .s-blog {
 	position: relative;
-  min-height: max(600px, calc(100vh - var(--navbar-height)));
 	padding: var(--spacer-lg) var(--spacer-md);
   display: flex;
 	flex-direction: column;
