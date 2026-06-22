@@ -3,11 +3,118 @@
 	padding-top: var(--spacer-xl);
 	padding-left: var(--spacer-md);
 	padding-right: var(--spacer-md);
-	padding-bottom: var(--spacer-lg);
+	padding-bottom: var(--spacer-2xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer-lg);
 
 	h2 {
 		font-size: var(--font-size-3xl);
 		font-weight: var(--bold);
+	}
+
+	span {
+    color: var(--color-text-primary-muted);
+	}
+
+	.experience-list {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-md);
+
+		.experience-item {
+			display: grid;
+			grid-template-columns: 100px 1fr;
+			gap: var(--spacer-md);
+			padding-top: var(--spacer-md);
+			padding-bottom: var(--spacer-md);
+			border-bottom: var(--border-primary-muted);
+			transition: background-color var(--duration-fast) var(--ease-standard),
+									border-radius var(--duration-fast) var(--ease-standard);
+
+			.company-logo {
+				width: 100px;
+				height: 100px;
+				min-width: 100px;
+				overflow: hidden;
+				position: relative;
+				border-radius: var(--spacer-md);
+
+				img {
+					position: absolute;
+					width: 100px;
+				}
+			}
+
+			h3 {
+				font-weight: var(--semibold);
+				padding-top: 10px;
+			}
+
+			.experience-company {
+				p {
+					padding: 0;
+				}
+
+				.label-wrapper {
+					margin-top: var(--spacer-xs);
+          list-style: none;
+					padding: 0;
+					display: flex;
+					flex-wrap: wrap;
+					gap: var(--spacer-sm);
+					max-width: 90%;
+
+					li {
+						display: flex;
+						align-items: center;
+						gap: var(--spacer-xs);
+						background-color: var(--color-bg-primary);
+						transition: background-color var(--duration-fast) var(--ease-standard);
+
+            svg {
+							width: 16px;
+							height: 16px;
+						}
+
+						.experience-item:hover & {
+							background-color: var(--color-bg-tertiary);
+						}
+					}
+				}
+
+				.experience-meta {
+					padding-top: var(--spacer-md);
+					font-size: var(--font-size-sm);
+					font-family: monospace;
+					display: flex;
+					flex-direction: column;
+					gap: var(--spacer-xs);
+					color: var(--color-text-primary-muted);
+				}
+			}
+
+			&:last-child {
+				border: none;
+
+				&:hover {
+					border: none;
+					padding-bottom: var(--spacer-md);
+				}
+			}
+
+			&:hover {
+				border-radius: var(--rounded-sm);
+				background-color: var(--color-bg-primary);
+				padding-bottom: calc(var(--spacer-md) - 1px);
+				border-bottom: var(--border-primary);
+				border-bottom-width: 2px;
+
+				.experience-company .label-wrapper li {
+					background-color: var(--color-bg-tertiary);
+				}
+			}
+		}
 	}
 }
 
