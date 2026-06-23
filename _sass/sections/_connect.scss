@@ -1,9 +1,9 @@
 .s-connect {
-  min-height: max(600px, calc(80vh - var(--navbar-height)));
+  min-height: 600px;
 	padding-top: var(--spacer-3xl);
 	padding-left: var(--spacer-md);
 	padding-right: var(--spacer-md);
-	padding-bottom: var(--spacer-lg);
+	padding-bottom: var(--spacer-3xl);
 	display: flex;
 	flex-direction: column;
 	align-items: center;

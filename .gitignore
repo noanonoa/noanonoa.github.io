@@ -10,3 +10,4 @@ vendor
 .bundle
 node_modules
 sandbox
+.antigravitycli
