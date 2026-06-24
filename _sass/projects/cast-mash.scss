@@ -1,0 +1,64 @@
+.s-project {
+	padding-top: var(--spacer-lg);
+	padding-bottom: var(--spacer-2xl);
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer-md);
+
+	.project-title {
+		h1 {
+			font-size: var(--font-size-4xl);
+			font-weight: var(--bold);
+		}
+	}
+
+	.project-image {
+		width: 100%;
+		border-radius: var(--rounded-md);
+		overflow: hidden;
+	}
+
+	.project-description {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-md);
+	}
+
+	.project-meta {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-lg);
+	}
+
+	.project-links {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-md);
+
+    a {
+			display: flex;
+			align-items: center;
+			gap: var(--spacer-xs);
+
+			svg {
+				width: var(--font-size-base);
+				height: var(--font-size-base);
+			}
+		}
+	}
+}
+
+@include respond-to('md') {
+	.s-project {
+		.project-description {
+			display: grid;
+			grid-template-columns: var(--grid-template-left);
+		}
+
+		.project-links {
+			flex-direction: row;
+		}
+	}
+}

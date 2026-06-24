@@ -30,7 +30,8 @@
 	--spacer-xl: 64px;
 	--spacer-2xl: 72px;
 	--spacer-3xl: 128px;
-	--grid-template-left: 300px auto;
+	--grid-template-left: 300px 1fr;
+	--grid-template-right: 1fr 300px;
 
 	// Typography
 	--font-family-primary: 'Jost', sans-serif;
