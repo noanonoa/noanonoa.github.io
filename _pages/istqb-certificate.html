@@ -5,11 +5,20 @@ permalink: /istqb-certificate
 robots: noindex
 sitemap: false
 ---
-<script>window.location.replace("{{ "/assets/pdf/istqb-certificate.pdf" | relative_url }}");</script>
-<meta http-equiv="refresh" content="0; url={{ "/assets/pdf/istqb-certificate.pdf" | relative_url }}">
 
-<div style="redirect-container">
+<section class="s-redirect">
   <h1>Redirecting...</h1>
-  <p>You are being redirected to the ISTQB certificate.</p>
-  <p><a href="{{ "/assets/pdf/istqb-certificate.pdf" | relative_url }}">Click here if you are not redirected automatically.</a></p>
-</div>
+  <div class="redirect-description">
+    <p>You are being redirected to Noa Kim's ISTQB certificate.</p>
+    <a href="{{ "/assets/pdf/istqb-certificate.pdf" | relative_url }}">Click here if you are not redirected automatically.</a>
+  </div>
+</section>
+
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      window.location.replace("{{ "/assets/pdf/istqb-certificate.pdf" | relative_url }}");
+    }, 3000);
+  });
+</script>
+<meta http-equiv="refresh" content="3000; url={{ "/assets/pdf/istqb-certificate.pdf" | relative_url }}">

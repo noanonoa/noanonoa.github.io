@@ -1,0 +1,25 @@
+.s-error {
+  min-height: max(600px, calc(80vh - var(--navbar-height)));
+	padding-top: var(--spacer-lg);
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+	padding-bottom: var(--spacer-xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer-lg);
+
+	h1 {
+		font-size: var(--font-size-giant);
+		font-weight: var(--bold);
+	}
+
+	.error-code {
+		opacity: .7;
+		font-size: var(--font-size-base);
+	}
+
+  .error-description {
+		font-size: var(--font-size-2xl);
+    width: var(--container-min-width);
+	}
+}
