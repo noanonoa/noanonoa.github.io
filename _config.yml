@@ -5,13 +5,14 @@
 url: https://www.noakim.io
 title: Noa Kim
 author: Noa Kim
-description: Solver. Maker. Teacher. 
+tagline: Full-stack Engineer
+description: Noa Kim is a full-stack software engineer specializing in Rails, React, and mobile development.
 email: hello@noakim.io
 social:
   name: Noa Kim
   links:
-    - github: https://github.com/noanonoa
-    - linkedin: https://www.linkedin.com/in/noanonoa
+    - https://www.github.com/noanonoa
+    - https://www.linkedin.com/in/noanonoa
 
 # Assets
 logo: /assets/images/NK-square-logo.png
@@ -23,8 +24,6 @@ include:
 
 sass:
   style: compressed
-  load_paths:
-    - _sass
 
 # Projects
 collections:
@@ -37,7 +36,7 @@ collections:
 ###################
 
 markdown: kramdown
-permalink: :title
+permalink: /:title
 timezone: America/Chicago
 highlighter: rouge
 github: [metadata]
@@ -58,12 +57,24 @@ defaults:
       path: ""
     values:
       image:
-        path: /assets/images/NK-square-logo.png # OG image path
-        height: 300
-        width: 300
+        path: /assets/images/NK-landscape-og.png # OG image path
 
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-email-protect
   - jekyll-seo-tag
+  - jekyll-redirect-from
+
+exclude:
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - yarn.lock
+  - mise.toml
+  - README.md
+  - LICENSE

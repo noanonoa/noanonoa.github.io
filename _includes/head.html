@@ -9,17 +9,17 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
   <link rel="apple-touch-icon" sizes="200x200" href="/assets/images/NK-square-logo.png">
   <link rel="icon" type="image/png" href="/assets/images/NK-square-logo.png">
-  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <script type="module" src="/assets/js/main.js"></script>
   {% if page.stylesheet %}
     <link rel="stylesheet" href="{{ page.stylesheet }}">
   {% endif %}
+  {% seo %}
+  {% feed_meta %}
+  <script type="module" src="/assets/js/main.js"></script>
   {% if page.script %}
     <script defer src="{{ page.script }}"></script>
   {% endif %}
-  {% feed_meta %}
-  {% seo %}
 </head>
