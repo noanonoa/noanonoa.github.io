@@ -1,0 +1,21 @@
+.s-redirect {
+  min-height: max(600px, calc(80vh - var(--navbar-height)));
+	padding-top: var(--spacer-lg);
+	padding-left: var(--spacer-md);
+	padding-right: var(--spacer-md);
+	padding-bottom: var(--spacer-xl);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer-lg);
+
+	h1 {
+		font-size: var(--font-size-4xl);
+		font-weight: var(--bold);
+	}
+
+  .redirect-description {
+		p {
+			font-size: var(--font-size-xl);
+		}
+	}
+}
