@@ -9,13 +9,21 @@
 	gap: var(--spacer-lg);
 
 	h1 {
-		font-size: var(--font-size-4xl);
+		font-size: var(--font-size-3xl);
 		font-weight: var(--bold);
 	}
 
   .redirect-description {
 		p {
 			font-size: var(--font-size-xl);
+		}
+	}
+}
+
+@include respond-to('md') {
+	.s-redirect {
+		h1 {
+			font-size: var(--font-size-4xl);
 		}
 	}
 }
