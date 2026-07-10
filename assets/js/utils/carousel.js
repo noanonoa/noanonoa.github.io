@@ -18,12 +18,16 @@ function setupCarousel(container) {
   container.querySelector('#carousel-next').addEventListener('click', goNext);
   container.addEventListener('keydown', handleKeydown);
   container.addEventListener('touchstart', handleTouchStart, { passive: true });
-  container.addEventListener('touchend', handleTouchEnd);
+  container.addEventListener('touchend', handleTouchEnd, { passive: true });
 
   goTo(0);
 }
 
 function goTo(index) {
+  // Pause video when leaving
+  const leavingVideo = slides[currentIndex]?.querySelector('video');
+  if (leavingVideo) leavingVideo.pause();
+
   // Wrap around (last -> first, first -> last)
   currentIndex = (index + totalSlides) % totalSlides;
 
@@ -37,15 +41,6 @@ function goTo(index) {
 
   // Announce to screen readers via live region
   liveRegion.textContent = `${currentIndex + 1} / ${totalSlides}`;
-
-  // Lazy-load the video ONLY when its slide is active
-  const activeSlide = slides[currentIndex];
-  const video = activeSlide.querySelector('video');
-  if (video && !video.querySelector('source').src) {
-    video.querySelector('source').src = activeSlide.dataset.videoSrc;
-    video.load();
-    video.play();
-  }
 
   // Prefetch the NEXT slide's image in the background
   prefetchNext(currentIndex);
@@ -75,6 +70,7 @@ function handleTouchEnd(e) {
   deltaX < 0 ? goNext() : goPrev();
 }
 
+// Preloads next slide image to prevent blank/flashing
 function prefetchNext(index) {
   const nextSlide = slides[(index + 1) % totalSlides];
   const img = nextSlide?.querySelector('img');

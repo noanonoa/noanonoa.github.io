@@ -20,9 +20,13 @@ const HTML_TEMPLATE = `
 					loading="lazy"
 				>
 			</li>
-			<li class="carousel__slide" data-video-src="clip.mp4">
-			  <video preload="none" poster="poster.jpg">
-				  <source type="video/mp4">
+			<li class="carousel__slide">
+			  <video
+          src="clip.mp4"
+          type="video/mp4"
+          preload="none"
+          poster="poster.jpg"
+          controls>
 			  </video>
 			</li>
     </ul>
@@ -112,16 +116,5 @@ describe("setupCarousel", () => {
     const slides = container.querySelectorAll(".carousel__slide");
 
     expect(slides[0].getAttribute("aria-hidden")).toBe("false");
-  });
-
-  it("video source is NOT set until its slide becomes active", () => {
-    const source = container.querySelector("source");
-    expect(source.src).toBeFalsy();
-
-    // navigate to the video slide (index 2)
-    document.getElementById("carousel-next").click();
-    document.getElementById("carousel-next").click();
-
-    expect(source.getAttribute("src")).toBe("clip.mp4");
   });
 });
