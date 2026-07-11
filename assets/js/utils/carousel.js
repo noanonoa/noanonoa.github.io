@@ -54,11 +54,27 @@ function goPrev() {
 }
 
 function handleTouchStart(e) {
+  if (e.touches.length > 1) return;
+
+  // Ignore multi-touch gestures (pinch-to-zoom) — null signals an invalid start
+  if (e.touches && e.touches.length > 1) {
+    touchStartX = null;
+    return;
+  }
   touchStartX = e.changedTouches[0].clientX;
   touchStartY = e.changedTouches[0].clientY;
 }
 
 function handleTouchEnd(e) {
+  // Multi-touch gesture was started — bail out
+  if (touchStartX === null) return;
+
+  // Don't intercept panning while the user has zoomed in
+  const isZoomed = window.visualViewport
+    ? window.visualViewport.scale > 1
+    : document.documentElement.clientWidth < window.innerWidth;
+  if (isZoomed) return;
+
   const deltaX = e.changedTouches[0].clientX - touchStartX;
   const deltaY = e.changedTouches[0].clientY - touchStartY;
 
