@@ -54,10 +54,8 @@ function goPrev() {
 }
 
 function handleTouchStart(e) {
-  if (e.touches.length > 1) return;
-
   // Ignore multi-touch gestures (pinch-to-zoom) — null signals an invalid start
-  if (e.touches && e.touches.length > 1) {
+  if (e.touches.length > 1) {
     touchStartX = null;
     return;
   }
